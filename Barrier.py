@@ -1,10 +1,12 @@
-space = int(input())
-print('height: ', space)
-a='**'
-if space>0 and space<24:
-     print(a)
-     while space>1:
-         print(a+'*')
+while True:
+    print('Enter value of height')
+    space = int(input())
+    if space>0 and space<24:
+       print('height: ', space)
+       a = '##'
+       print(' '*(space),a)
+       while space>1:
+         print(" "*(space-1),a+'#')
          space -= 1
-         a = a + '*'
-
+         a = a + '#'
+       break
