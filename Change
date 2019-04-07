@@ -1,0 +1,29 @@
+print("Enter change:")
+a = int(input())
+b=a//50
+n=0
+if b==1:
+    n+=1
+else: n=n
+c=a%50
+b = c // 10
+if b==4:
+    n+=4
+else: n=n
+if b==3:
+    n+=3
+else: n=n
+if b==2:
+    n+=2
+else: n=n
+if b==1:
+    n+=1
+else: n=n
+c=c%10
+b=c//5
+if b==1:
+    n+=1
+else:n=n
+c=c%5
+n+=c
+print ("Amount of coins: ", n)
