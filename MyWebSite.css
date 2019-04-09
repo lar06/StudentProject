@@ -20,7 +20,7 @@ header {
     display: flex;
     width: 100%;
     height: 60vh;
-    background-image: url(https://cdn.pixabay.com/photo/2018/08/23/07/35/thunderstorm-3625405_960_720.jpg);
+    background-image: url(https://cdn.pixabay.com/photo/2016/10/31/11/55/wine-partner-1785391_960_720.jpg);
     background-size: cover;
     justify-content: center;
     align-items: center;
@@ -28,7 +28,7 @@ header {
 .main-img__name {
     font-size: 3rem;
     text-transform: uppercase;
-    color: rgba(255,255,255,.8);
+    color: rgba(255,255,255,1);
     text-decoration: none;
     font-family: 'Fascinate Inline', cursive;
     margin-top: 350px;
@@ -53,7 +53,7 @@ header {
     display: flex;
     width: 15%;
     height: 30vh;
-    border: 2px solid red;
+    border: 2px solid black;
     border-radius: 100%;
     background-image: url(https://pp.userapi.com/c850036/v850036496/df6ad/NNKCZwsaq0I.jpg);
     background-size: cover;
