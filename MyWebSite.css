@@ -2,7 +2,7 @@ body {
     margin: 0;
 }
 header {
-    background-color: rgba(0,0,0,.5);
+    background-color: rgba(0,0,0,.7);
     width: 100%;
     height: 60px;
     padding: 20px 70px;
@@ -19,8 +19,8 @@ header {
 .main-img {
     display: flex;
     width: 100%;
-    height: 100vh;
-    background-image: url(https://cdn.pixabay.com/photo/2017/02/08/12/52/forest-2048742_960_720.jpg);
+    height: 60vh;
+    background-image: url(https://cdn.pixabay.com/photo/2018/08/23/07/35/thunderstorm-3625405_960_720.jpg);
     background-size: cover;
     justify-content: center;
     align-items: center;
@@ -30,14 +30,15 @@ header {
     text-transform: uppercase;
     color: rgba(255,255,255,.8);
     text-decoration: none;
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Fascinate Inline', cursive;
+    margin-top: 350px;
 }
 .header__links a {
     font-size: 1rem;
     text-transform: uppercase;
     color: rgba(255,255,255,.8);
     text-decoration: none;
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Fascinate Inline', cursive;
     margin: 0 15px;
 }
 .header__site-link {
@@ -45,6 +46,18 @@ header {
     text-transform: uppercase;
     color: rgba(255,255,255,.8);
     text-decoration: none;
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Fascinate Inline', cursive;
     margin: 0 15px;
+}
+.main-portrait {
+    display: flex;
+    width: 15%;
+    height: 30vh;
+    border: 2px solid red;
+    border-radius: 100%;
+    background-image: url(https://pp.userapi.com/c850036/v850036496/df6ad/NNKCZwsaq0I.jpg);
+    background-size: cover;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
 }
