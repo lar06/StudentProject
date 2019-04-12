@@ -1,0 +1,77 @@
+/*
+ ============================================================================
+ Name        : Calculator.c
+ Author      : Larin
+ Version     :
+ Copyright   : Your copyright notice
+ Description : Hello World in C, Ansi-style
+ ============================================================================
+ */
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+int main() {
+        char sign = '+';
+        float a, b, c, f=1;
+        printf("sign: ");
+        scanf("%c", &sign);
+        if (sign == '+' || sign == '-' || sign == '*' || sign == '/'|| sign == 'f'|| sign == '^') {
+                switch (sign) {
+                case '+':
+                        printf("a=");
+                        scanf("%f", &a);
+                        printf("b=");
+                        scanf("%f", &b);
+                        printf("%f", a + b);
+                        break;
+                case '-':
+                        printf("a=");
+                        scanf("%f", &a);
+                        printf("b=");
+                        scanf("%f", &b);
+                        printf("%f", a - b);
+                        break;
+                case '*':
+                        printf("a=");
+                        scanf("%f", &a);
+                        printf("b=");
+                        scanf("%f", &b);
+                        printf("%f", a * b);
+                        break;
+                case '/':
+                        printf("a=");
+                        scanf("%f", &a);
+                        printf("b=");
+                        scanf("%f", &b);
+                        printf("%f", a / b);
+                        break;
+                case 'f':
+                        printf("a=");
+                        scanf("%f", &a);
+                	    while (a>0) {
+						    f=f*a;
+                	        a--;
+                	    }
+                        printf("%f", f);
+                        break;
+                case '^':
+                        printf("a=");
+                        scanf("%f", &a);
+                        printf("b=");
+                        scanf("%f", &b);
+                        c=a;
+                	    while (b>1) {
+                	    	a=a*c;
+                	    	b--;
+                	    }
+                	    printf("%f", a);
+                	    break;
+                default:
+                        printf("Wrong sign");
+                }
+        }
+        else printf("????");
+        return 0;
+
+}
