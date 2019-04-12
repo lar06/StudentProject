@@ -10,15 +10,18 @@
 
 #include <stdio.h>
 #include <stdlib.h>
-#include <math.h>
 int main() {
         char sign = '+';
         float a, b, c, f=1;
-        printf("sign: ");
+        //Выбор операции
+        printf("Enter operation sign\n");
+        printf("Sign: ");
         scanf("%c", &sign);
         if (sign == '+' || sign == '-' || sign == '*' || sign == '/'|| sign == 'f'|| sign == '^') {
                 switch (sign) {
                 case '+':
+                	    //Операция сложения
+                	    printf("Enter two number\n");
                         printf("a=");
                         scanf("%f", &a);
                         printf("b=");
@@ -26,6 +29,8 @@ int main() {
                         printf("%f", a + b);
                         break;
                 case '-':
+                	    //Операция вычитания
+                	    printf("Enter two number\n");
                         printf("a=");
                         scanf("%f", &a);
                         printf("b=");
@@ -33,6 +38,8 @@ int main() {
                         printf("%f", a - b);
                         break;
                 case '*':
+                	    //Операция умножения
+                	    printf("Enter two number\n");
                         printf("a=");
                         scanf("%f", &a);
                         printf("b=");
@@ -40,6 +47,8 @@ int main() {
                         printf("%f", a * b);
                         break;
                 case '/':
+                	    //Операция деления
+                	    printf("Enter two number\n");
                         printf("a=");
                         scanf("%f", &a);
                         printf("b=");
@@ -47,6 +56,8 @@ int main() {
                         printf("%f", a / b);
                         break;
                 case 'f':
+                	    //Вычесления факториала
+                	    printf("Enter a number\n");
                         printf("a=");
                         scanf("%f", &a);
                 	    while (a>0) {
@@ -56,8 +67,11 @@ int main() {
                         printf("%f", f);
                         break;
                 case '^':
+                	    //Возведение в степень
+                	    printf("Enter a number\n");
                         printf("a=");
                         scanf("%f", &a);
+                        printf("Enter a power\n");
                         printf("b=");
                         scanf("%f", &b);
                         c=a;
@@ -71,7 +85,7 @@ int main() {
                         printf("Wrong sign");
                 }
         }
-        else printf("????");
+        else printf("Wrong sign");
         return 0;
 
 }
