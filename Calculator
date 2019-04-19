@@ -11,81 +11,105 @@
 #include <stdio.h>
 #include <stdlib.h>
 int main() {
-        char sign = '+';
+        char sign = '+'; char operation = 'v';
         float a, b, c, f=1;
-        //Выбор операции
-        printf("Enter operation sign\n");
-        printf("Sign: ");
-        scanf("%c", &sign);
-        if (sign == '+' || sign == '-' || sign == '*' || sign == '/'|| sign == 'f'|| sign == '^') {
-                switch (sign) {
-                case '+':
-                	    //Операция сложения
-                	    printf("Enter two number\n");
-                        printf("a=");
-                        scanf("%f", &a);
-                        printf("b=");
-                        scanf("%f", &b);
-                        printf("%f", a + b);
-                        break;
-                case '-':
-                	    //Операция вычитания
-                	    printf("Enter two number\n");
-                        printf("a=");
-                        scanf("%f", &a);
-                        printf("b=");
-                        scanf("%f", &b);
-                        printf("%f", a - b);
-                        break;
-                case '*':
-                	    //Операция умножения
-                	    printf("Enter two number\n");
-                        printf("a=");
-                        scanf("%f", &a);
-                        printf("b=");
-                        scanf("%f", &b);
-                        printf("%f", a * b);
-                        break;
-                case '/':
-                	    //Операция деления
-                	    printf("Enter two number\n");
-                        printf("a=");
-                        scanf("%f", &a);
-                        printf("b=");
-                        scanf("%f", &b);
-                        printf("%f", a / b);
-                        break;
-                case 'f':
-                	    //Вычесления факториала
-                	    printf("Enter a number\n");
-                        printf("a=");
-                        scanf("%f", &a);
-                	    while (a>0) {
-						    f=f*a;
-                	        a--;
-                	    }
-                        printf("%f", f);
-                        break;
-                case '^':
-                	    //Возведение в степень
-                	    printf("Enter a number\n");
-                        printf("a=");
-                        scanf("%f", &a);
-                        printf("Enter a power\n");
-                        printf("b=");
-                        scanf("%f", &b);
-                        c=a;
-                	    while (b>1) {
-                	    	a=a*c;
-                	    	b--;
-                	    }
-                	    printf("%f", a);
-                	    break;
-                default:
-                        printf("Wrong sign");
-                }
-        }
-        else printf("Wrong sign");
-        return 0;
+        int i;
+        printf("Enter type of operation\n");
+        scanf("%c", &operation);
+        switch (operation) {
+        case 'n':
+				//Выбор операции
+				printf("Enter operation sign\n");
+				printf("Sign: ");
+				scanf("%c", &sign);
+				if (sign == '+' || sign == '-' || sign == '*' || sign == '/'|| sign == 'f'|| sign == '^') {
+						switch (sign) {
+						case '+':
+								//Операция сложения
+								printf("Enter two number\n");
+								printf("a=");
+								scanf("%f", &a);
+								printf("b=");
+								scanf("%f", &b);
+								printf("%f", a + b);
+								break;
+						case '-':
+								//Операция вычитания
+								printf("Enter two number\n");
+								printf("a=");
+								scanf("%f", &a);
+								printf("b=");
+								scanf("%f", &b);
+								printf("%f", a - b);
+								break;
+						case '*':
+								//Операция умножения
+								printf("Enter two number\n");
+								printf("a=");
+								scanf("%f", &a);
+								printf("b=");
+								scanf("%f", &b);
+								printf("%f", a * b);
+								break;
+						case '/':
+								//Операция деления
+								printf("Enter two number\n");
+								printf("a=");
+								scanf("%f", &a);
+								printf("b=");
+								scanf("%f", &b);
+								printf("%f", a / b);
+								break;
+						case 'f':
+								//Вычесления факториала
+								printf("Enter a number\n");
+								printf("a=");
+								scanf("%f", &a);
+								while (a>0) {
+									f=f*a;
+									a--;
+								}
+								printf("%f", f);
+								break;
+						case '^':
+								//Возведение в степень
+								printf("Enter a number\n");
+								printf("a=");
+								scanf("%f", &a);
+								printf("Enter a power\n");
+								printf("b=");
+								scanf("%f", &b);
+								c=a;
+								while (b>1) {
+									a=a*c;
+									b--;
+								}
+								printf("%f", a);
+								break;
+						default:
+								printf("Wrong sign");
+						}
+				}
+				else printf("Wrong sign");
+				return 0;
 
-}
+		}
+        case 'v':
+        	//Выбор операции
+        	printf("Enter operation sign\n");
+        	printf("Sign: ");
+        	scanf("%c", &sign);
+        	if (sign == '+' || sign == '-' || sign == '*') {
+        		switch (sign) {
+        		case '+':
+        			printf ("Enter vector length\n");
+        			scanf ("%i", &i);
+        			printf ("Enter vector coordinates");
+        			for(int k=1;k<=i;k++) {
+        				scanf ()
+        			}
+
+        		}
+        	}
+
+        }
