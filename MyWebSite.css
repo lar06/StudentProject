@@ -65,7 +65,8 @@ header {
     display: flex;
     width: 100%;
     height: auto;
-    background-color: antiquewhite;
+    background-image: url(https://news.rambler.ru/img/2018/11/27084450.720171.8924.jpeg);
+    background-position: 0px 400px;
     background-size: cover;
     flex-direction: column;
     justify-content: flex-start;
@@ -74,14 +75,13 @@ header {
 #About-Me_title {
     font-size: 3rem;
     text-transform: uppercase;
-    color: black;
+    color: white;
     font-family: 'Fascinate Inline', cursive;
     position: relative;
-
 }
 .About-Me_main {
     font-size:  1.5rem;
-    color: black;
+    color: white;
     font-family: 'Fascinate Inline', cursive;
     position: relative;
     margin: 0 50px;
@@ -92,7 +92,8 @@ header {
     flex-direction: column;
     width: 100%;
     height: auto;
-    background-color: aquamarine;
+    background-image: url(https://m.media-amazon.com/images/G/01/mobile-apps/dex/alexa/alexa-skills-kit/lantern-pages/ASK-learn_header-1._CB484394383_.png);
+    background-position: 0px -250px;
     background-size: cover;
     justify-content: flex-start;
     align-items: center;
@@ -112,3 +113,105 @@ header {
     grid-row-gap: 50px;
     min-height: 500px;
 }
+.c1 {
+    background-color: #fafafa;
+    width:280px;
+    height: 280px;
+    padding: 20px 20px;
+    display: flex;
+    position: relative;
+    border: 2px solid black;
+    border-radius: 100%;
+    left: 250px;
+    box-sizing: border-box;
+}
+.c2 {
+    background-color: #e2e2e2;
+    width:280px;
+    height: 280px;
+    padding: 20px 20px;
+    display: flex;
+    position: relative;
+    border: 2px solid black;
+    border-radius: 100%;
+    box-sizing: border-box;
+}
+.c3 {
+    background-color: #acacac;
+    width:280px;
+    height: 280px;
+    padding: 20px 20px;
+    display: flex;
+    position: relative;
+    border: 2px solid black;
+    border-radius: 100%;
+    right: 250px;
+    box-sizing: border-box;
+}
+.c4 {
+    background-color: #878787;
+    width:280px;
+    height: 280px;
+    padding: 20px 20px;
+    display: flex;
+    position: relative;
+    border: 2px solid black;
+    border-radius: 100%;
+    left: 250px;
+    box-sizing: border-box;
+}
+.c5 {
+    background-color: #3e3e3e;
+    width:280px;
+    height: 280px;
+    padding: 20px 20px;
+    display: flex;
+    position: relative;
+    border: 2px solid black;
+    border-radius: 100%;
+    box-sizing: border-box;
+}
+.c6 {
+    background-color: black;
+    width:280px;
+    height: 280px;
+    padding: 20px 20px;
+    display: flex;
+    position: relative;
+    border: 2px solid black;
+    border-radius: 100%;
+    right: 250px;
+    box-sizing: border-box;
+}
+.Contact {
+    display: flex;
+    width: 100%;
+    height: auto;
+    background-color: #a8a8a4;
+    background-size: cover;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+#Contact_title {
+    font-size: 3rem;
+    text-transform: uppercase;
+    color: black;
+    font-family: 'Fascinate Inline', cursive;
+    position: relative
+}
+.Contact_main {
+    font-size:  1.5rem;
+    color: black;
+    font-family: 'Fascinate Inline', cursive;
+    position: relative;
+    margin: 0 50px;
+    text-align: center;
+}
+.link1 {
+    font-size: 1.5rem;
+}
+.link2 {
+    font-size: 1.5rem;
+}
+
