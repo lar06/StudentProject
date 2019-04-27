@@ -1,217 +1,432 @@
 body {
+
     margin: 0;
+
 }
+
 header {
+
     background-color: rgba(0,0,0,.9);
+
     width: 100%;
+
     height: 60px;
+
     padding: 20px 70px;
+
     display: flex;
+
     flex-direction: row;
+
     flex-wrap: nowrap;
+
     justify-content: space-between;
+
     box-sizing: border-box;
+
     position: absolute;
+
     top: 0;
+
     left: 0;
+
     z-index: 1;
+
 }
+
 .main-img {
+
     display: flex;
+
     width: 100%;
+
     height: 100vh;
+
     background-image: url(https://cdn.pixabay.com/photo/2017/02/08/12/46/moon-2048727_960_720.jpg);
+
     background-size: cover;
+
     justify-content: center;
+
     align-items: center;
+
 }
+
 .main-img__name {
+
     font-size: 3rem;
+
     text-transform: uppercase;
+
     color: rgba(255,255,255,1);
+
     text-decoration: none;
+
     font-family: 'Fascinate Inline', cursive;
+
     margin-top: 350px;
+
 }
+
 .header__links a {
+
     font-size: 1rem;
+
     text-transform: uppercase;
+
     color: rgba(255,255,255,.8);
+
     text-decoration: none;
+
     font-family: 'Fascinate Inline', cursive;;
+
     margin: 0 15px;
+
 }
+
 .header__site-link {
+
     font-size: 1rem;
+
     text-transform: uppercase;
+
     color: rgba(255,255,255,.8);
+
     text-decoration: none;
+
     font-family: 'Raleway', sans-serif;
+
     margin: 0 15px;
+
 }
+
 .main-img_portrait {
+
     display: flex;
+
     width: 15%;
+
     height: 30vh;
+
     border: 2px solid black;
+
     border-radius: 100%;
+
     background-image: url(https://pp.userapi.com/c850036/v850036496/df6ad/NNKCZwsaq0I.jpg);
+
     background-size: cover;
+
     justify-content: center;
+
     align-items: center;
+
     position: absolute;
+
 }
+
 .About-Me {
+
     display: flex;
+
     width: 100%;
+
     height: auto;
+
     background-image: url(https://news.rambler.ru/img/2018/11/27084450.720171.8924.jpeg);
+
     background-position: 0px 400px;
+
     background-size: cover;
+
     flex-direction: column;
+
     justify-content: flex-start;
+
     align-items: center;
+
 }
+
 #About-Me_title {
+
     font-size: 3rem;
+
     text-transform: uppercase;
+
     color: white;
+
     font-family: 'Fascinate Inline', cursive;
+
     position: relative;
+
 }
+
 .About-Me_main {
+
     font-size:  1.5rem;
+
     color: white;
+
     font-family: 'Fascinate Inline', cursive;
+
     position: relative;
+
     margin: 0 50px;
+
     text-align: center;
+
 }
+
 .Skills {
+
     display: flex;
+
     flex-direction: column;
+
     width: 100%;
+
     height: auto;
+
     background-image: url(https://m.media-amazon.com/images/G/01/mobile-apps/dex/alexa/alexa-skills-kit/lantern-pages/ASK-learn_header-1._CB484394383_.png);
+
     background-position: 0px -250px;
+
     background-size: cover;
+
     justify-content: flex-start;
+
     align-items: center;
+
 }
+
 #Skills_title {
+
     font-size: 3rem;
+
     text-transform: uppercase;
+
     color: black;
+
     font-family: 'Fascinate Inline', cursive;
+
     position: relative;
+
 }
+
 .Skills_grid {
+
     display: grid;
+
     grid-template-columns: 1fr 1fr 1fr;
+
     grid-template-rows: 1fr 1fr;
+
     grid-column-gap: 500px;
+
     grid-row-gap: 50px;
+
     min-height: 500px;
+
 }
+
 .c1 {
+
     background-color: #fafafa;
+
     width:280px;
+
     height: 280px;
+
     padding: 20px 20px;
+
     display: flex;
+
     position: relative;
+
     border: 2px solid black;
+
     border-radius: 100%;
+
     left: 250px;
+
     box-sizing: border-box;
+
 }
+
 .c2 {
+
     background-color: #e2e2e2;
+
     width:280px;
+
     height: 280px;
+
     padding: 20px 20px;
+
     display: flex;
+
     position: relative;
+
     border: 2px solid black;
+
     border-radius: 100%;
+
     box-sizing: border-box;
+
 }
+
 .c3 {
+
     background-color: #acacac;
+
     width:280px;
+
     height: 280px;
+
     padding: 20px 20px;
+
     display: flex;
+
     position: relative;
+
     border: 2px solid black;
+
     border-radius: 100%;
+
     right: 250px;
+
     box-sizing: border-box;
+
 }
+
 .c4 {
+
     background-color: #878787;
+
     width:280px;
+
     height: 280px;
+
     padding: 20px 20px;
+
     display: flex;
+
     position: relative;
+
     border: 2px solid black;
+
     border-radius: 100%;
+
     left: 250px;
+
     box-sizing: border-box;
+
 }
+
 .c5 {
+
     background-color: #3e3e3e;
+
     width:280px;
+
     height: 280px;
+
     padding: 20px 20px;
+
     display: flex;
+
     position: relative;
+
     border: 2px solid black;
+
     border-radius: 100%;
+
     box-sizing: border-box;
+
 }
+
 .c6 {
+
     background-color: black;
+
     width:280px;
+
     height: 280px;
+
     padding: 20px 20px;
+
     display: flex;
+
     position: relative;
+
     border: 2px solid black;
+
     border-radius: 100%;
+
     right: 250px;
+
     box-sizing: border-box;
+
 }
+
 .Contact {
+
     display: flex;
+
     width: 100%;
+
     height: auto;
+
     background-color: #a8a8a4;
+
     background-size: cover;
+
     flex-direction: column;
+
     justify-content: flex-start;
+
     align-items: center;
+
 }
+
 #Contact_title {
+
     font-size: 3rem;
+
     text-transform: uppercase;
+
     color: black;
+
     font-family: 'Fascinate Inline', cursive;
+
     position: relative
+
 }
+
 .Contact_main {
+
     font-size:  1.5rem;
+
     color: black;
+
     font-family: 'Fascinate Inline', cursive;
+
     position: relative;
+
     margin: 0 50px;
+
     text-align: center;
+
 }
+
 .link1 {
+
     font-size: 1.5rem;
+
 }
+
 .link2 {
+
     font-size: 1.5rem;
+
 }
 
