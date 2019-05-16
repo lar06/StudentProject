@@ -15,6 +15,7 @@ int main() {
 	float a, b, c, f = 1;
 	int i, n, d;
 	float *A = NULL, *B = NULL, sum, rezult;
+	FILE *infile, *outfile;
 	while (d != 0) {
 		printf("Enter type of operation\n");
 		scanf("%c", &operation);
@@ -29,65 +30,42 @@ int main() {
 				switch (sign) {
 				case '+':
 					//Операция сложения
-					printf("Enter two number\n");
-					printf("a=");
-					scanf("%f", &a);
-					printf("b=");
-					scanf("%f", &b);
-					printf("%f", a + b);
+					fscanf(infile,"%f %f",&a,&b);
+					fprintf(outfile,"%f", a + b);
 					break;
 				case '-':
 					//Операция вычитания
-					printf("Enter two number\n");
-					printf("a=");
-					scanf("%f", &a);
-					printf("b=");
-					scanf("%f", &b);
-					printf("%f", a - b);
+					fscanf(infile,"%f %f",&a,&b);
+					fprintf(outfile,"%f", a - b);
 					break;
 				case '*':
 					//Операция умножения
-					printf("Enter two number\n");
-					printf("a=");
-					scanf("%f", &a);
-					printf("b=");
-					scanf("%f", &b);
-					printf("%f", a * b);
+					fscanf(infile,"%f %f",&a,&b);
+					fprintf(outfile,"%f", a * b);
 					break;
 				case '/':
 					//Операция деления
-					printf("Enter two number\n");
-					printf("a=");
-					scanf("%f", &a);
-					printf("b=");
-					scanf("%f", &b);
-					printf("%f", a / b);
+					fscanf(infile,"%f %f",&a,&b);
+					fprintf(outfile,"%f", a / b);
 					break;
 				case 'f':
 					//Вычесления факториала
-					printf("Enter a number\n");
-					printf("a=");
-					scanf("%f", &a);
+					fscanf(infile,"%f,&a);
 					while (a > 0) {
 						f = f * a;
 						a--;
 					}
-					printf("%f", f);
+					fprintf(outfile,"%f", f);
 					break;
 				case '^':
 					//Возведение в степень
-					printf("Enter a number\n");
-					printf("a=");
-					scanf("%f", &a);
-					printf("Enter a power\n");
-					printf("b=");
-					scanf("%f", &b);
+					fscanf(infile,"%f %f",&a,&b);
 					c = a;
 					while (b > 1) {
 						a = a * c;
 						b--;
 					}
-					printf("%f", a);
+					fprintf(outfile,"%f", a);
 					break;
 				}
 			} else
@@ -105,53 +83,48 @@ int main() {
 				case '+':
 					A = malloc(n * sizeof(float));
 					for (i = 0; i < n; i++) {
-						printf("Enter first vector coordinates\n", i);
-						scanf("%f", &A[i]);
+						fscanf(infile,"%f", &A[i]);
 					}
 					B = malloc(n * sizeof(float));
 					for (i = 0; i < n; i++) {
-						printf("Enter second vector coordinates\n", i);
-						scanf("%f", &B[i]);
+						fscanf(infile,"%f", &B[i]);
 					}
 					for (i = 0; i < n; i++) {
-						printf("%f", A[i] + B[i]);
+						fprintf(outfile,"%f", A[i] + B[i]);
 					}
 					break;
 					free(A);
 					free(B);
 				case '-':
-					A = malloc(n * sizeof(float));
+				      	A = malloc(n * sizeof(float));
 					for (i = 0; i < n; i++) {
-						printf("Enter first vector coordinates\n", i);
-						scanf("%f", &A[i]);
+						fscanf(infile,"%f", &A[i]);
 					}
 					B = malloc(n * sizeof(float));
 					for (i = 0; i < n; i++) {
-						printf("Enter second vector coordinates\n", i);
-						scanf("%f", &B[i]);
+						fscanf(infile,"%f", &B[i]);
 					}
 					for (i = 0; i < n; i++) {
-						printf("%f", A[i] - B[i]);
+						fprintf(outfile,"%f", A[i] - B[i]);
 					}
 					break;
 					free(A);
 					free(B);
+
 				case '*':
 					A = malloc(n * sizeof(float));
 					for (i = 0; i < n; i++) {
-						printf("Enter first vector coordinates\n", i);
-						scanf("%f", &A[i]);
+						fscanf(infile,"%f", &A[i]);
 					}
 					B = malloc(n * sizeof(float));
 					for (i = 0; i < n; i++) {
-						printf("Enter second vector coordinates\n", i);
-						scanf("%f", &B[i]);
+						fscanf(infile,"%f", &B[i]);
 					}
 					for (i = 0; i < n; i++) {
 						rezult = A[i] * B[i];
 						sum = sum + rezult;
 					}
-					printf("%f", &sum);
+					fprintf(outfile,"%f", &sum);
 					break;
 					free(A);
 					free(B);
