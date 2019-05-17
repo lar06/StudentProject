@@ -15,42 +15,35 @@ int main() {
 	float a, b, c, f = 1;
 	int i, n, d;
 	float *A = NULL, *B = NULL, sum, rezult;
-	FILE *infile, *outfile;
+    FILE *infile, *outfile;
+    infile=fopen("/home/student/eclipse-workspace/File/infile.txt","r");
+    outfile=fopen("/home/student/eclipse-workspace/File/outfile.txt","w");
 	while (d != 0) {
-		printf("Enter type of operation\n");
-		scanf("%c", &operation);
+		fscanf(infile,"%c %c %f %f %d %f %f",&operation,&sign,&a,&b,&n,&A[i],&B[i]);
 		switch (operation) {
 		case 'n':
 			//Выбор операции
-			printf("Enter operation sign\n");
-			printf("Sign: ");
-			scanf(" %c", &sign);
 			if (sign == '+' || sign == '-' || sign == '*' || sign == '/'
 					|| sign == 'f' || sign == '^') {
 				switch (sign) {
 				case '+':
 					//Операция сложения
-					fscanf(infile,"%f %f",&a,&b);
 					fprintf(outfile,"%f", a + b);
 					break;
 				case '-':
 					//Операция вычитания
-					fscanf(infile,"%f %f",&a,&b);
 					fprintf(outfile,"%f", a - b);
 					break;
 				case '*':
 					//Операция умножения
-					fscanf(infile,"%f %f",&a,&b);
 					fprintf(outfile,"%f", a * b);
 					break;
 				case '/':
 					//Операция деления
-					fscanf(infile,"%f %f",&a,&b);
 					fprintf(outfile,"%f", a / b);
 					break;
 				case 'f':
 					//Вычесления факториала
-					fscanf(infile,"%f,&a);
 					while (a > 0) {
 						f = f * a;
 						a--;
@@ -59,7 +52,6 @@ int main() {
 					break;
 				case '^':
 					//Возведение в степень
-					fscanf(infile,"%f %f",&a,&b);
 					c = a;
 					while (b > 1) {
 						a = a * c;
@@ -73,21 +65,14 @@ int main() {
 			    break;
 		case 'v':
 			//Выбор операции
-			printf("Enter vector size\n");
-			scanf("%d", &n);
-			printf("Enter operation sign\n");
-			printf("Sign: ");
-			scanf(" %c", &sign);
 			if (sign == '+' || sign == '-' || sign == '*') {
 				switch (sign) {
 				case '+':
 					A = malloc(n * sizeof(float));
 					for (i = 0; i < n; i++) {
-						fscanf(infile,"%f", &A[i]);
 					}
 					B = malloc(n * sizeof(float));
 					for (i = 0; i < n; i++) {
-						fscanf(infile,"%f", &B[i]);
 					}
 					for (i = 0; i < n; i++) {
 						fprintf(outfile,"%f", A[i] + B[i]);
@@ -98,11 +83,9 @@ int main() {
 				case '-':
 				      	A = malloc(n * sizeof(float));
 					for (i = 0; i < n; i++) {
-						fscanf(infile,"%f", &A[i]);
 					}
 					B = malloc(n * sizeof(float));
 					for (i = 0; i < n; i++) {
-						fscanf(infile,"%f", &B[i]);
 					}
 					for (i = 0; i < n; i++) {
 						fprintf(outfile,"%f", A[i] - B[i]);
@@ -114,17 +97,15 @@ int main() {
 				case '*':
 					A = malloc(n * sizeof(float));
 					for (i = 0; i < n; i++) {
-						fscanf(infile,"%f", &A[i]);
 					}
 					B = malloc(n * sizeof(float));
 					for (i = 0; i < n; i++) {
-						fscanf(infile,"%f", &B[i]);
 					}
 					for (i = 0; i < n; i++) {
 						rezult = A[i] * B[i];
 						sum = sum + rezult;
 					}
-					fprintf(outfile,"%f", &sum);
+					fprintf(outfile,"%f", sum);
 					break;
 					free(A);
 					free(B);
@@ -133,8 +114,10 @@ int main() {
 				printf("Wrong sign");
 			    break;
 		}
-		printf("Repeat?/n");
+		printf("Repeat?\n");
 		scanf("%d", &d);
 	}
 	return 0;
+	fclose(infile);
+	fclose(outfile);
 }
