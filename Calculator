@@ -19,12 +19,13 @@ int main() {
     infile=fopen("/home/student/eclipse-workspace/File/infile.txt","r");
     outfile=fopen("/home/student/eclipse-workspace/File/outfile.txt","w");
 	while (d != 0) {
-		fscanf(infile,"%c %c %f %f %d %f %f",&operation,&sign,&a,&b,&n,&A[i],&B[i]);
+		fscanf(infile,"%c",&operation);
 		switch (operation) {
 		case 'n':
 			//Выбор операции
 			if (sign == '+' || sign == '-' || sign == '*' || sign == '/'
 					|| sign == 'f' || sign == '^') {
+				fscanf(infile,"%c %c %f %f",&operation,&sign,&a,&b);
 				switch (sign) {
 				case '+':
 					//Операция сложения
@@ -66,13 +67,16 @@ int main() {
 		case 'v':
 			//Выбор операции
 			if (sign == '+' || sign == '-' || sign == '*') {
+			        fscanf(infile,"%c %c %d",&operation,&sign,&n);
 				switch (sign) {
 				case '+':
 					A = malloc(n * sizeof(float));
 					for (i = 0; i < n; i++) {
+					        fscanf(infile,"%f", &A[i]);
 					}
 					B = malloc(n * sizeof(float));
 					for (i = 0; i < n; i++) {
+					        fscanf(infile,"%f", &B[i]);
 					}
 					for (i = 0; i < n; i++) {
 						fprintf(outfile,"%f", A[i] + B[i]);
@@ -83,9 +87,11 @@ int main() {
 				case '-':
 				      	A = malloc(n * sizeof(float));
 					for (i = 0; i < n; i++) {
+					        fscanf(infile,"%f", &A[i]);
 					}
 					B = malloc(n * sizeof(float));
 					for (i = 0; i < n; i++) {
+					        fscanf(infile,"%f", &B[i]);
 					}
 					for (i = 0; i < n; i++) {
 						fprintf(outfile,"%f", A[i] - B[i]);
@@ -97,9 +103,11 @@ int main() {
 				case '*':
 					A = malloc(n * sizeof(float));
 					for (i = 0; i < n; i++) {
+					        fscanf(infile,"%f", &A[i]);
 					}
 					B = malloc(n * sizeof(float));
 					for (i = 0; i < n; i++) {
+					        fscanf(infile,"%f", &B[i]);
 					}
 					for (i = 0; i < n; i++) {
 						rezult = A[i] * B[i];
